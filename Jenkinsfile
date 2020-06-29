@@ -1,8 +1,9 @@
 pipeline {
     agent {
         docker {
+            lable 'node1'
             image 'maven:3-alpine'
-            args '-v /Users/wuxin/.m2:/root/.m2'
+            args '-v /home/sa/.m2:/root/.m2'
         }
     }
     stages {
